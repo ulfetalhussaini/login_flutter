@@ -28,12 +28,12 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future signUp() async {
-    if(passwordConfirmed()) {
-    await FirebaseAuth.instance.createUserWithEmailAndPassword(
-      email: _emailController.text.trim(),
-      password: _passworController.text.trim(),
-    );
-  }
+    if (passwordConfirmed()) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passworController.text.trim(),
+      );
+    }
   }
 
   bool passwordConfirmed() {
@@ -136,7 +136,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         controller: _confirmpassworController,
                         obscureText: true,
                         decoration: InputDecoration(
-                            border: InputBorder.none, hintText: 'Confirm Password'),
+                            border: InputBorder.none,
+                            hintText: 'Confirm Password'),
                       ),
                     ),
                   ),
